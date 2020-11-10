@@ -1,0 +1,19 @@
+{
+  "name": "romannumerals",
+  "version": "1.0.0",
+  "description": "Esse é um software para transformar números inteiros em números romanos",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "mocha",
+    "chrome": "start chrome $(realpath index.html)",
+    "opera": "start opera $(realpath index.html)",
+    "firefox": "start firefox $(realpath index.html)"
+  },
+  "author": "Vinicius M. Finger",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}

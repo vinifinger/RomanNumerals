@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Number TO Roman</title>
+        <script src = "index.js" type = "text/javascript"></script>
+    </head>
+    <body>
+        <h1>Convert Number to Roman</h1>
+        <input id="decimal" type="number" min="1" max="3999">
+        <input id="roman"   type="text" readonly="readonly"/>
+    </body>
+    <script type="text/javascript">
+    
+    document.getElementById("decimal").addEventListener('keyup', function() {		
+		var romanNumber = numberToRoman(this.value);
+        
+        document.getElementById("roman").value = romanNumber;
+    });
+    
+    </script>
+</html>
