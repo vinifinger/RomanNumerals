@@ -54,7 +54,9 @@ function numberToRoman (input) {
     for (var i = 0; i <= input.length; i++)
         context += input.charAt(i).replace(/[^0-9]/, '');
 
-    // Verifica se o número informado está dentro do limite máximo
+    if (context == '') 
+        return "É necessário informar algum número válido";
+
     if (parseInt(context) > 3999)
         return "Limite maximo permitido é de '3999'";
     
@@ -63,19 +65,6 @@ function numberToRoman (input) {
     for (var i = context.length; i >= 1 ;i--) {
         var j = context.length - i;
         var auxVar = parseInt(context.charAt(j));
-        /* 
-            A busca é feita para cada caractere informado, sendo usada a quantidade de caracteres 
-            e o número informado para isso.
-            Exemplo: 
-            i  |  auxVar
-            2  |  5
-            1  |  5
-
-            Ele pega o primeiro caractere e busca o valor no objeto map:
-                1º Vai pegar o objeto 2 (Dezena) e retornar o item 5 ('L')
-                2º Vai pegar o objeto 1 (Unidade) e retornar o item 5 ('V');
-                resultado: 'LV'
-        */
         result += map[i][auxVar];
     }
     return result;

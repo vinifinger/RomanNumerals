@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node index.js",
-    "test": "mocha",
-    "chrome": "start chrome $(realpath index.html)",
-    "opera": "start opera $(realpath index.html)",
-    "firefox": "start firefox $(realpath index.html)"
+    "test": "mocha"
   },
   "author": "Vinicius M. Finger",
   "license": "ISC",
